@@ -59,3 +59,16 @@ sso:
   openFlag: false
   sso-client-type: server
 
+# 智谱AI相关
+openAi:
+  zhipu:
+    apiKey: 65ee4bb3b71d438a38970a3ed03415bc.fddznRTbuqDtxgST
+  aliyun:
+    apiKey: sk-f446659a269f4108a44d7a91d2e857f4
+  iflytek:
+    appId: e515e5f9
+    apiSecret: NGVlNjcwNTg4MjBmNTViNTJhMzY0MzE1
+    apiKey: d5e07002e7c2abeeb4ddd70649d35aa6
+
+
+
