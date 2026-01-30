@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.guns.modular.tuoguan.student.mapping.BusContactMapper">
+  <resultMap id="BaseResultMap" type="cn.stylefeng.guns.modular.tuoguan.student.entity.BusContact">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="stu_number" jdbcType="VARCHAR" property="stuNumber" />
+    <result column="contact_name" jdbcType="VARCHAR" property="contactName" />
+    <result column="contact_number" jdbcType="VARCHAR" property="contactNumber" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="upd_time" jdbcType="TIMESTAMP" property="updTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, stu_number, contact_name, contact_number, create_time, upd_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from bus_contact
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from bus_contact
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="cn.stylefeng.guns.modular.tuoguan.student.entity.BusContact" useGeneratedKeys="true">
+    insert into bus_contact (stu_number, contact_name, contact_number, 
+      create_time, upd_time)
+    values (#{stuNumber,jdbcType=VARCHAR}, #{contactName,jdbcType=VARCHAR}, #{contactNumber,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="cn.stylefeng.guns.modular.tuoguan.student.entity.BusContact" useGeneratedKeys="true">
+    insert into bus_contact
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="stuNumber != null">
+        stu_number,
+      </if>
+      <if test="contactName != null">
+        contact_name,
+      </if>
+      <if test="contactNumber != null">
+        contact_number,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updTime != null">
+        upd_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="stuNumber != null">
+        #{stuNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="contactName != null">
+        #{contactName,jdbcType=VARCHAR},
+      </if>
+      <if test="contactNumber != null">
+        #{contactNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updTime != null">
+        #{updTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.stylefeng.guns.modular.tuoguan.student.entity.BusContact">
+    update bus_contact
+    <set>
+      <if test="stuNumber != null">
+        stu_number = #{stuNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="contactName != null">
+        contact_name = #{contactName,jdbcType=VARCHAR},
+      </if>
+      <if test="contactNumber != null">
+        contact_number = #{contactNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updTime != null">
+        upd_time = #{updTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.stylefeng.guns.modular.tuoguan.student.entity.BusContact">
+    update bus_contact
+    set stu_number = #{stuNumber,jdbcType=VARCHAR},
+      contact_name = #{contactName,jdbcType=VARCHAR},
+      contact_number = #{contactNumber,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      upd_time = #{updTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
