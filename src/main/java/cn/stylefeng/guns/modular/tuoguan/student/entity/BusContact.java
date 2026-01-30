@@ -1,6 +1,7 @@
 package cn.stylefeng.guns.modular.tuoguan.student.entity;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class BusContact implements Serializable {
@@ -22,9 +23,9 @@ public class BusContact implements Serializable {
      */
     private String contactNumber;
 
-    private Date createTime;
+    private LocalDateTime createTime;
 
-    private Date updTime;
+    private LocalDateTime updTime;
 
     private static final long serialVersionUID = 1L;
 
@@ -60,19 +61,19 @@ public class BusContact implements Serializable {
         this.contactNumber = contactNumber;
     }
 
-    public Date getCreateTime() {
+    public LocalDateTime getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(LocalDateTime createTime) {
         this.createTime = createTime;
     }
 
-    public Date getUpdTime() {
+    public LocalDateTime getUpdTime() {
         return updTime;
     }
 
-    public void setUpdTime(Date updTime) {
+    public void setUpdTime(LocalDateTime updTime) {
         this.updTime = updTime;
     }
 

@@ -1,6 +1,7 @@
 package cn.stylefeng.guns.modular.tuoguan.student.entity;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class BusStudent implements Serializable {
@@ -46,7 +47,7 @@ public class BusStudent implements Serializable {
      *
      * @mbg.generated
      */
-    private String class;
+    private String clazz;
 
     /**
      * 年级
@@ -62,9 +63,9 @@ public class BusStudent implements Serializable {
      */
     private Byte leave;
 
-    private Date createTime;
+    private LocalDateTime createTime;
 
-    private Date updTime;
+    private LocalDateTime updTime;
 
     private static final long serialVersionUID = 1L;
 
@@ -116,12 +117,12 @@ public class BusStudent implements Serializable {
         this.school = school;
     }
 
-    public String getClass() {
-        return class;
+    public String getClazz() {
+        return clazz;
     }
 
-    public void setClass(String class) {
-        this.class = class;
+    public void setClass(String clazz) {
+        this.clazz = clazz;
     }
 
     public String getGrade() {
@@ -140,19 +141,19 @@ public class BusStudent implements Serializable {
         this.leave = leave;
     }
 
-    public Date getCreateTime() {
+    public LocalDateTime getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(LocalDateTime createTime) {
         this.createTime = createTime;
     }
 
-    public Date getUpdTime() {
+    public LocalDateTime getUpdTime() {
         return updTime;
     }
 
-    public void setUpdTime(Date updTime) {
+    public void setUpdTime(LocalDateTime updTime) {
         this.updTime = updTime;
     }
 
@@ -168,7 +169,7 @@ public class BusStudent implements Serializable {
         sb.append(", gender=").append(gender);
         sb.append(", age=").append(age);
         sb.append(", school=").append(school);
-        sb.append(", class=").append(class);
+        sb.append(", class=").append(clazz);
         sb.append(", grade=").append(grade);
         sb.append(", leave=").append(leave);
         sb.append(", createTime=").append(createTime);

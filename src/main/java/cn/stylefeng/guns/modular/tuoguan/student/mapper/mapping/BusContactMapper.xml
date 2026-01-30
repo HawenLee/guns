@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.stylefeng.guns.modular.tuoguan.student.mapping.BusContactMapper">
+<mapper namespace="cn.stylefeng.guns.modular.tuoguan.student.mapper.BusContactMapper">
   <resultMap id="BaseResultMap" type="cn.stylefeng.guns.modular.tuoguan.student.entity.BusContact">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="stu_number" jdbcType="VARCHAR" property="stuNumber" />
